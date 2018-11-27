@@ -8,9 +8,6 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -
 
 RUN docker-php-ext-install mcrypt pdo_mysql intl gd zip bz2 pcntl soap xml
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
-RUN apt-get install -y nodejs
-
 RUN pecl install apcu
 RUN pecl install apcu_bc-1.0.3
 RUN pecl install xdebug
